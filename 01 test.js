@@ -6,7 +6,7 @@ if (wasThatTrue) {
 }
 return "No, that was false";
 }
-
+//
 console.log(trueOrFalse(true))
 console.log(trueOrFalse(false))
 
@@ -74,7 +74,8 @@ function testElse(val) {
   } else {
     result = "5 or Smaller";
   } return result;
-} console.log(testElse(4));
+}
+console.log(testElse(4));
 
 // *************************************************************************************
 
@@ -211,7 +212,8 @@ switch (val){
     return "stuff";
     break;
 }return answer;
-}console.log(switchOfStuff("a"));
+}
+console.log(switchOfStuff("a"));
 
 // ***********************************************************************
 function sequentialSizes(val) {
@@ -233,7 +235,8 @@ switch (val){
     return "High";
     break;
 }return answer;
-}console.log(sequentialSizes(4));
+}
+console.log(sequentialSizes(4));
 
 
 // *************************************************************************************
@@ -248,6 +251,7 @@ function isLess(a, b) {
     return a < b;
 }
 
+
 console.log(isLess(10, 15));
 
 
@@ -255,7 +259,8 @@ function myFun() {
   console.log("Hello");
   return "World";
   console.log("byebye")
-} console.log(myFun());
+}
+console.log(myFun());
 
 
 function abTest(a, b) {
@@ -264,33 +269,3 @@ if (a < 0 || b < 0){
 } return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 console.log(abTest(2,2));
-
-
-// *************************************************************************************
-// *                                                                                   *
-// *                                                                                   *
-// *                   Counting Card Game BlackJack                                    *
-// *                                                                                   *
-// *                                                                                   *
-// *************************************************************************************
-// In the casino game Blackjack, a player can gain an advantage over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called Card Counting.
-// Having more high cards remaining in the deck favors the player. Each card is assigned a value according to the table below. When the count is positive, the player should bet high. When the count is zero or negative, the player should bet low.
-// Count Change: +1; 	Cards: 2, 3, 4, 5, 6
-// Count Change: 0;  	Cards: 7, 8, 9
-// Count Change: -1; 	Cards: 10, 'J', 'Q', 'K', 'A'
-
-
-var count = 0;
-
-function cc(card) {
-  if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6){
-    count +1;
-  }if (card == 7 || card == 8 || card == 9){
-    count = 0;
-  }if(card == 10 || card == "J" || card == "Q" || card == "K" || card == "A"){
-    count = -1;
-  }
-  return count;
-}
-
-console.log(cc(2, 3, 7, 'K', 'A'));
