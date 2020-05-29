@@ -404,8 +404,10 @@ var collection = {
 };
 
 function updateRecords(id, prop, value) {
-  if (prop !== 'tracks'){
-    return collection[id][prop].push(value)}
+  if (collection[id][prop] === 'tracks'){
+
+  // if (prop === 'tracks'){
+    return collection[id][prop][value]}
   // }else if (prop === 'tracks' && value){
   //   return value.push;
   // }else if (value === ''){
@@ -414,13 +416,10 @@ function updateRecords(id, prop, value) {
 
 
 
-  // collection['5439'].artist = "ABBA";
-  // collection['5439'].tracks.push("Take a Chance on Me");
-  // delete collection['2548'].artist;
-  // collection['1245'].tracks = "Addicted to Love";
-  // delete collection['2548'].tracks;
-  // collection['1245'].album = "Riptide";
 
+  else {
+    return "bmbmnbmbmnb"
+  }
   return collection;
 }
 
