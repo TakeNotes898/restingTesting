@@ -244,8 +244,7 @@ var dogs = { Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"};
 var myDog = "Snoopie";
 var myBreed = dogs[myDog];
 console.log(myBreed); // "Doberman"
-
-
+// ***********************************************************************
 var testObj = {
   12: "Namath",
   16: "Montana",
@@ -258,7 +257,7 @@ console.log(player);
 testObj[21] = "Bangkok"
 testObj[12] = "Namath foo"
 console.log(testObj);
-
+// ***********************************************************************
 // Look into this. keep notes
 var variable = { propName: "John" };
 function function1(string) {
@@ -290,10 +289,8 @@ function phoneticLookup(val) {
   return lookup[val];
   return result;
 } console.log(phoneticLookup("alpha"));
-
-
+// ***********************************************************************
 function checkObj(obj, checkProp) {
-
 var myObj = {
   gift: "pony",
   pet: "kitten",
@@ -309,7 +306,6 @@ if(myObj.hasOwnProperty(checkProp)) {
 console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift"));
 console.log(checkObj({city: "Seattle"}, "city"));
 console.log(checkObj({city: "Seattle"}, "district"));
-
 
 // *************************************************************************************
 // *                                                                                   *
@@ -337,7 +333,6 @@ var myMusic = [
 ];
 console.log(myMusic[1]);
 
-
 // *************************************************************************************
 // *                                                                                   *
 // *                                                                                   *
@@ -354,8 +349,6 @@ var myStorage = {
 }};
 var gloveBoxContents = myStorage.car.inside['glove box'];
 console.log(myStorage);
-
-
 // *************************************************************************************
 // *                                                                                   *
 // *                                                                                   *
@@ -375,7 +368,6 @@ var myPlants = [
     list: [ "fir", "pine", "birch" ]
   }
 ];
-
 var secondTree = myPlants[1].list[1];
 console.log(secondTree);
 
@@ -402,27 +394,18 @@ var collection = {
   5439: {
     album: "ABBA Gold"}
 };
-
 function updateRecords(id, prop, value) {
-  if (collection[id][prop] === 'tracks'){
-
-  // if (prop === 'tracks'){
-    return collection[id][prop][value]}
-  // }else if (prop === 'tracks' && value){
-  //   return value.push;
-  // }else if (value === ''){
-  //   delete prop.value;
-  // }
-
-
-
-
-  else {
-    return "bmbmnbmbmnb"
-  }
-  return collection;
+  if(value === "") delete collection[id][prop];
+  else if(prop === "tracks") {
+  collection[id][prop] = collection[id][prop] || [];
+  collection[id][prop].push(value);
+}
+else {
+  collection[id][prop] = value;
 }
 
+return collection;
+}
 console.log(updateRecords(5439, "artist", "ABBA"));
 console.log(updateRecords(1245, "album", "Riptide"));
 console.log(updateRecords(2468, "tracks", "Free"));
@@ -432,6 +415,91 @@ console.log(updateRecords(5439, "tracks", "Take a Chance on Me"));
 console.log(updateRecords(1245, "tracks", "Addicted to Love"));
 
 
+// *************************************************************************************
+// *                                                                                   *
+// *                                                                                   *
+// *                    Iterate with JavaScript While Loops                            *
+// *                                                                                   *
+// *                                                                                   *
+// *************************************************************************************
+
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);
+  i++;
+}
+console.log(ourArray);
+// ***********************************************************************
+var myArray = [];
+var i = 0;
+while(i < 6) {
+  myArray.push(i);
+  i++;
+}
+var newArray = myArray.reverse(i);
+console.log(newArray);
+
+// *************************************************************************************
+// *                                                                                   *
+// *                                                                                   *
+// *                       Iterate with JavaScript For Loops                           *
+// *                                                                                   *
+// *                                                                                   *
+// *************************************************************************************
+
+// For loops are declared with three optional expressions separated by semicolons:
+// for ([initialization]; [condition]; [final-expression])
+// The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.
+// The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When condition is false at the start of the iteration, the loop will stop executing. This means if condition starts as false, your loop will never execute.
+// The final-expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter.
+var myArray1 = [];
+for (var i = 1; i < 6; i++){
+  myArray1.push(i)
+}
+console.log(myArray1);
+
+// *************************************************************************************
+// *                                                                                   *
+// *                                                                                   *
+// *                       Iterate Odd Numbers With a For Loop                         *
+// *                     Iterate Through an Array with a For Loop                      *
+// *                                                                                   *
+// *                                                                                   *
+// *************************************************************************************
+var ourArray1 = [];
+for (var i = 0; i < 10; i += 2) {
+  ourArray1.push(i);
+} console.log(ourArray1);
+// ***********************************************************************
+var ourArray2 = [];
+for (var i = 9; i > 0; i -= 2) {
+  ourArray2.push(i);
+} console.log(ourArray2);
+// ***********************************************************************
+// A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a for loop. Remember that arrays have zero-based indexing, which means the last index of the array is length - 1. Our condition for this loop is i < arr.length, which stops the loop when i is equal to length.
+// ***********************************************************************
+var myArr2 = [ 2, 3, 4, 5, 6];
+var total = 0;
+for (var i = 0; i < myArr2.length; i++) {
+  total += myArr2[i]
+} console.log(total);
+// ***********************************************************************
+var myArr3 = [ 2, 3, 4, 5, 6];
+var total3 = 0;
+  for (var i = myArr3.length - 1; i >= 0; i--) {
+    total3 += myArr3[i];
+  } console.log(total3);
+
+
+  var arr = [
+    [1,2], [3,4], [5,6]
+  ];
+  for (var i=0; i < arr.length; i++) {
+    for (var j=0; j < arr[i].length; j++) {
+      console.log(arr[i][j]);
+    }}
+  // } console.log(arr);
 
 
 
