@@ -127,8 +127,16 @@ Use bracket notation when accessing object properties with variables.
 Push is an array method you can read about on Mozilla Developer Network.
 
 
-
-
+function updateRecords(id, prop, value) {
+if (prop === 'tracks'){
+}else if (prop === 'tracks' && value){
+  return value.push;
+}else if (value === ''){
+  delete prop.value;
+}
+else {return "bmbmnbmbmnb"}
+return collection;
+}
 
 
 
