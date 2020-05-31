@@ -499,8 +499,29 @@ var total3 = 0;
     for (var j=0; j < arr[i].length; j++) {
       console.log(arr[i][j]);
     }}
-  // } console.log(arr);
 
+  console.log(arr);
+  // / write a function that takes an album's id (2548), a property prop ("artist"), and a value("Addicted to Love")
+  tracks = []
+
+  function updateRecords(id, prop, value){
+      // If prop isn't "tracks" and value isn't empty ("")
+      if (prop !== 'tracks' && value!=='') {
+          // create an empty array before adding the new value to the album's corresponding property
+      // If prop is "tracks" but the album doesn't have a "tracks" property
+      } else if (props === 'tracks' && !collection.id.tracks){
+          // create an empty array before adding the new value to the album's corresponding property.
+      // If prop is "tracks" and value isn't empty (""),
+      } else if (props === 'tracks' && value!=="") {
+          // push the value onto the end of the album's existing tracks array.
+      // If value is empty (""),
+      } else if (value==="") {
+          // delete the given prop property from the album.
+      }
+      // then, return the colleciton object
+      return collection
+  }
+  console.log(updateRecords());
 
 
 
