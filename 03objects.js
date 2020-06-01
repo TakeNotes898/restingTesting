@@ -31,7 +31,21 @@ console.log(updateRecords(5439, "tracks", "Take a Chance on Me"));
 console.log(updateRecords(1245, "tracks", "Addicted to Love"));
 
 // ***********************************************************************
-
+function updateRecords(id, prop, value) {
+  this.id = id;
+  this.prop = prop;
+  this.value = value;
+  if (prop !== 'tracks' && value !== ''){
+    collection[id][value] = value
+  }
+  // else if (prop === 'tacks' && value !== ''){
+  //   collection[tracks][value].push(value)
+  // }
+  else if (value === ''){
+    delete collection[id][prop]
+  }
+  return collection;
+}
 
 
 // ***********************************************************************
@@ -53,17 +67,17 @@ console.log(updateRecords(1245, "tracks", "Addicted to Love"));
 
 // function updateRecords(id, prop, value) {
 //   if (prop !== 'tracks' && value !== ''){
-//     collection[id][value] = value}
-  // } else if (prop === 'tracks' && !collection[id].tracks){
-  //   trackArr = [];
-  //   collection[id].tracks = trackArr;
-  //   collection[id].tracks.push(value);
-  // }
+//     collection[id][value] = value
+//   }
+//   else if (prop === 'tracks' && !collection[id].tracks){
+//     trackArr = [];
+//     collection[id].tracks = trackArr;
+//     collection[id].tracks.push(value);
+//   }
 //   return collection;
 // }
 
-
-
+// ***********************************************************************
 
 
 
