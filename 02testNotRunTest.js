@@ -89,42 +89,42 @@ else if(myObj.hasOwnProperty(obj) != true){
 // ***********************************************************
 // You should not change the collection object's initialization
 
-After updateRecords(5439, "artist", "ABBA"),
-artist should be "ABBA"
-After updateRecords(1245, "album", "Riptide"),
-album should be "Riptide"
-After updateRecords(2468, "tracks", "Free"),
-tracks should have "1999" as the first element.
-After updateRecords(2548, "tracks", ""),
-tracks should not be set
-After updateRecords(2548, "artist", ""),
-artist should not be set
-After updateRecords(5439, "tracks", "Take a Chance on Me"),
-tracks should have "Take a Chance on Me" as the last element.
-After updateRecords(1245, "tracks", "Addicted to Love"),
-tracks should have "Addicted to Love" as the last element.
-
-
-
-If prop isn't "tracks"
-value isn't empty ("")
-set the value = album's property.
-
-If prop is "tracks"
-but the album doesn't have a "tracks" property,
-create an empty array before adding the new value to the album's corresponding property.
-
-If prop is "tracks" and
-value isn't empty (""),
-push the value onto the end of the album's existing tracks array.
-
-If value is empty (""),
-delete the given prop property from the album.
-
-Hints
-Use bracket notation when accessing object properties with variables.
-
-Push is an array method you can read about on Mozilla Developer Network.
+// After updateRecords(5439, "artist", "ABBA"),
+// artist should be "ABBA"
+// After updateRecords(1245, "album", "Riptide"),
+// album should be "Riptide"
+// After updateRecords(2468, "tracks", "Free"),
+// tracks should have "1999" as the first element.
+// After updateRecords(2548, "tracks", ""),
+// tracks should not be set
+// After updateRecords(2548, "artist", ""),
+// artist should not be set
+// After updateRecords(5439, "tracks", "Take a Chance on Me"),
+// tracks should have "Take a Chance on Me" as the last element.
+// After updateRecords(1245, "tracks", "Addicted to Love"),
+// tracks should have "Addicted to Love" as the last element.
+//
+//
+//
+// If prop isn't "tracks"
+// value isn't empty ("")
+// set the value = album's property.
+//
+// If prop is "tracks"
+// but the album doesn't have a "tracks" property,
+// create an empty array before adding the new value to the album's corresponding property.
+//
+// If prop is "tracks" and
+// value isn't empty (""),
+// push the value onto the end of the album's existing tracks array.
+//
+// If value is empty (""),
+// delete the given prop property from the album.
+//
+// Hints
+// Use bracket notation when accessing object properties with variables.
+//
+// Push is an array method you can read about on Mozilla Developer Network.
 
 
 function updateRecords(id, prop, value) {
@@ -138,26 +138,26 @@ else {return "bmbmnbmbmnb"}
 return collection;
 }
 // ***********************************************************************
-// write a function that takes an album's id (2548), a property prop ("artist"), and a value("Addicted to Love")
-tracks = []
-function updateRecords(id, prop, value){
-    // If prop isn't "tracks" and value isn't empty ("")
-    if (prop !== 'tracks' && value!=='') {
-        // create an empty array before adding the new value to the album's corresponding property
-    // If prop is "tracks" but the album doesn't have a "tracks" property
-    } else if (props === 'tracks' && !collection.id.tracks){
-        // create an empty array before adding the new value to the album's corresponding property.
-    // If prop is "tracks" and value isn't empty (""),
-    } else if (props === 'tracks' && value!=="") {
-        // push the value onto the end of the album's existing tracks array.
-    // If value is empty (""),
-    } else if (value==="") {
-        // delete the given prop property from the album.
-    }
-    // then, return the colleciton object
-    return collection
-}
-console.log(updateRecords());
+// // write a function that takes an album's id (2548), a property prop ("artist"), and a value("Addicted to Love")
+// tracks = []
+// function updateRecords(id, prop, value){
+//     // If prop isn't "tracks" and value isn't empty ("")
+//     if (prop !== 'tracks' && value!=='') {
+//         // create an empty array before adding the new value to the album's corresponding property
+//     // If prop is "tracks" but the album doesn't have a "tracks" property
+//     } else if (props === 'tracks' && !collection.id.tracks){
+//         // create an empty array before adding the new value to the album's corresponding property.
+//     // If prop is "tracks" and value isn't empty (""),
+//     } else if (props === 'tracks' && value!=="") {
+//         // push the value onto the end of the album's existing tracks array.
+//     // If value is empty (""),
+//     } else if (value==="") {
+//         // delete the given prop property from the album.
+//     }
+//     // then, return the colleciton object
+//     return collection
+// }
+// console.log(updateRecords());
 
 
 
